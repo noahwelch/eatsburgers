@@ -24,7 +24,18 @@
     }
 
     &__mobile-nav-toggle {
+        background-color: $col-blue-light;
+        cursor: pointer;
         width: 60px;
+        @include standard-transition(background-color);
+        @include media($size-desktop) {
+            display: none;
+        }
+
+        &:hover,
+        &.is-active {
+            background-color: $col-blue;
+        }
     }
 
     &__navigation {

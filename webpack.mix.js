@@ -28,7 +28,7 @@ const standardMix = () => mix
         .extract(['jquery'])
         .autoload({
             jquery: ['$', 'jQuery', 'window.jQuery'],
-            // 'headroom.js': ['Headroom']
+            'headroom.js': ['Headroom']
         })
         .sass('src/scss/style.scss', './')
         .disableNotifications()

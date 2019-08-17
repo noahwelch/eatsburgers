@@ -22,3 +22,15 @@ $spacing-md: $base-spacing * 4;
 // Animations
 $base-duration: 0.2s;
 $base-timing: ease-in-out;
+
+// Mobile Toggle
+$hamburger-padding-x: 0px;
+$hamburger-padding-y: 0px;
+$hamburger-layer-width: 22px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 5px;
+$hamburger-layer-color: $col-white;
+$hamburger-layer-border-radius: 0px;
+$hamburger-hover-opacity: 0.7;
+$hamburger-hover-transition-duration: 0.15s;
+$hamburger-hover-transition-timing-function: linear;
