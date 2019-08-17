@@ -21,7 +21,7 @@ export default class MainNav {
 
     createNavs() {
         $('body').removeClass(this.bodyOpenClass)
-        if (window.matchMedia(`(min-width: 1200px)`).matches) {
+        if (window.matchMedia(`(min-width: 640px)`).matches) {
             this.setDesktopNav()
         } else {
             this.setMobileNav()

@@ -6,7 +6,7 @@
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
-            <a class="page-head__logo" href="/"><?php include(locate_template('icons/logo.php')); ?></a>
+            <a class="page-head__logo" href="/"><?php include(locate_template('icons/logo.php')); ?><span class="page-head__logo-text">Eats.</span></a>
         </div>
     </div>
     <div class="page-head__navigation" data-element="navigation">

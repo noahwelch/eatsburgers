@@ -10,11 +10,16 @@
     &__logo {
         display: flex;
         align-items: center;
+        line-height: 1;
         margin: {
             top: $spacing-xs;
             right: auto;
             bottom: $spacing-xs;
             left: auto;
+        }
+        text-decoration: none;
+        @include media($size-desktop-menu) {
+            margin-left: 0;
         }
 
         > svg {
@@ -23,12 +28,25 @@
         }
     }
 
+    &__logo-text {
+        color: $col-white;
+        display: none;
+        font-weight: 700;
+        margin:{
+            top: $base-spacing;
+            left: $spacing-sm;
+        }
+        @include media($size-desktop-menu) {
+            display: block;
+        }
+    }
+
     &__mobile-nav-toggle {
         background-color: $col-blue-light;
         cursor: pointer;
         width: 60px;
         @include standard-transition(background-color);
-        @include media($size-desktop) {
+        @include media($size-desktop-menu) {
             display: none;
         }
 
@@ -42,8 +60,19 @@
         @extend %base-nav;
         background-color: $col-blue;
         display: none;
-        @include media($size-desktop) {
+        @include media($size-desktop-menu) {
             display: block;
+        }
+
+        .menu {
+            @include media($size-desktop-menu) {
+                display: flex;
+                margin: {
+                    right: auto;
+                    left: auto;
+                }
+                max-width: $size-desktop;
+            }
         }
 
         .-nav-open & {
@@ -52,6 +81,9 @@
 
         .menu-item {
             border-bottom: 1px solid $col-blue-off-white;
+            @include media($size-desktop-menu) {
+                border-bottom: none;
+            }
 
             &:last-child {
                 border-bottom: none;
