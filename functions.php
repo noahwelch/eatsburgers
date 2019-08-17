@@ -76,14 +76,11 @@ add_action( 'wp_enqueue_scripts', 'mix_enqueue_styles' );
 function mix_enqueue_scripts() {
     wp_enqueue_script( 'scripts' , mix('/js/app.js'), [], null );
 }
-
 add_action( 'wp_enqueue_scripts', 'mix_enqueue_scripts' );
 
 function register_main_nav() {
     register_nav_menus( array(
         'primary' => 'Primary Navigation'
     ) );
-
 }
-
 add_action( 'after_setup_theme', 'register_main_nav' );

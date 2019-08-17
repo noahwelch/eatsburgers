@@ -2,15 +2,12 @@
     /*
      * Template Name: Gencon Page
     */
-
 ?>
 
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
-<?php the_title(); ?>
+<div class="container">
+    <h1><?php the_title(); ?></h1>
+</div>
 
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>
