@@ -24,7 +24,7 @@ const standardConfig = {
 }
 
 const standardMix = () => mix
-        .scripts(['src/js/app.js'], './js/app.js')
+        .scripts(['node_modules/jquery/dist/jquery.js','src/js/app.js'], './js/app.js')
         .sass('src/scss/style.scss', './')
         .disableNotifications()
         .options({

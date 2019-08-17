@@ -74,11 +74,16 @@ function mix_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'mix_enqueue_styles' );
 
 function mix_enqueue_scripts() {
-
-    $theme = wp_get_theme();
-    wp_enqueue_script( $theme->get('TextDomain') . '-jquery' , 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js' , array() , '3.3.1' , true );
-
     wp_enqueue_script( 'scripts' , mix('/js/app.js'), [], null );
 }
 
 add_action( 'wp_enqueue_scripts', 'mix_enqueue_scripts' );
+
+function register_main_nav() {
+    register_nav_menus( array(
+        'primary' => 'Primary Navigation'
+    ) );
+
+}
+
+add_action( 'after_setup_theme', 'register_main_nav' );
