@@ -1,0 +1,6 @@
+
+@mixin media($query: $feature $value) {
+    @media screen and ($breakpoint-direction: $query) {
+        @content;
+    }
+}
