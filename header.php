@@ -9,3 +9,4 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php include(locate_template('components/main-nav.php')); ?>
