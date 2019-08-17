@@ -1,5 +1,16 @@
 <?php
 
+function init_theme() {
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 740, 9999 );
+}
+add_action( 'after_setup_theme', 'init_theme' );
+
+
+function set_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'set_excerpt_length', 999 );
 
 if (! function_exists('starts_with')) {
     function starts_with($haystack, $needles)

@@ -1263,6 +1263,14 @@ table {
           transform: rotate(-90deg);
 }
 
+.h1 {
+  font-size: 36px;
+}
+
+.general-content p {
+  font-size: 14px;
+}
+
 .page-head__navigation {
   font-size: 18px;
 }
@@ -1301,6 +1309,10 @@ body {
   padding-left: 20px;
 }
 
+.general-content h1, .general-content h2, .general-content h3, .general-content h4, .general-content h5, .general-content h6, .general-content p {
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
 .page-head__logo-container {
   background-color: #006EF5;
 }
@@ -1420,4 +1432,70 @@ body {
 }
 .page-head__navigation .menu-item.current-menu-item > a, .page-head__navigation .menu-item.current_page_parent > a {
   color: #FFC700;
+}
+
+.blog-post-preview {
+  padding-top: 20px;
+}
+.blog-post-preview__image > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.blog-post-preview__meta {
+  color: #767676;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.blog-post-preview__title {
+  padding-bottom: 15px;
+}
+.blog-post-preview__title > a {
+  color: #CC4B00;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.blog-post-preview__title > a:hover {
+  color: #004EAE;
+}
+.blog-post-preview__link {
+  color: #CC4B00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.blog-post-preview__link svg {
+  fill: #CC4B00;
+}
+.blog-post-preview__link:hover {
+  color: #004EAE;
+}
+.blog-post-preview__link:hover svg {
+  fill: #004EAE;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }

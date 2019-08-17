@@ -13,3 +13,7 @@
 %base-form {
     font-size: 16px;
 }
+
+.h1 {
+    @extend %base-heading;
+}
