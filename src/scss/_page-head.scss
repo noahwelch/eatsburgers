@@ -1,5 +1,76 @@
 .page-head {
     &__logo-container {
         background-color: $col-blue-light;
+
+        > .container {
+            display: flex;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin: {
+            top: $spacing-xs;
+            right: auto;
+            bottom: $spacing-xs;
+            left: auto;
+        }
+
+        > svg {
+            max-width: 50px;
+            max-height: 40px;
+        }
+    }
+
+    &__mobile-nav-toggle {
+        width: 60px;
+    }
+
+    &__navigation {
+        @extend %base-nav;
+        background-color: $col-blue;
+        display: none;
+        @include media($size-desktop) {
+            display: block;
+        }
+
+        .-nav-open & {
+            display: block;
+        }
+
+        .menu-item {
+            border-bottom: 1px solid $col-blue-off-white;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            > a {
+                @extend .container;
+                color: $col-white;
+                display: block;
+                padding: {
+                    top: $spacing-sm;
+                    bottom: $spacing-sm;
+                }
+                @include standard-transition(color);
+
+                &:hover {
+                    color: $col-yellow;
+                }
+            }
+
+
+
+            &.current-menu-item,
+            &.current_page_parent {
+                background-color: $col-blue-dark;
+
+                > a {
+                    color: $col-yellow;
+                }
+            }
+        }
     }
 }

@@ -1,5 +1,29 @@
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+body {
+    display: flex;
+    color: $col-gray-dark;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .container {
     width: 100%;
     max-width: $size-desktop;
     margin: 0 auto;
+    padding: {
+        right: $spacing-md;
+        left: $spacing-md;
+    }
 }

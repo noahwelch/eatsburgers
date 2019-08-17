@@ -74,6 +74,8 @@ function mix_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'mix_enqueue_styles' );
 
 function mix_enqueue_scripts() {
+    wp_enqueue_script( 'manifest' , mix('/js/manifest.js'), [], null );
+    wp_enqueue_script( 'vendor' , mix('/js/vendor.js'), [], null );
     wp_enqueue_script( 'scripts' , mix('/js/app.js'), [], null );
 }
 add_action( 'wp_enqueue_scripts', 'mix_enqueue_scripts' );

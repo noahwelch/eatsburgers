@@ -2,6 +2,7 @@
 $col-blue: #004EAE;
 $col-blue-dark: #013371;
 $col-blue-light: #006EF5;
+$col-blue-off-white: #5488c8;
 $col-gray: #767676;
 $col-gray-dark: #333333;
 $col-orange: #CC4B00;
@@ -12,3 +13,12 @@ $breakpoint-direction: 'min-width';
 
 // Breakpoints
 $size-desktop: 1200px;
+
+$base-spacing: 5px;
+$spacing-xs: $base-spacing * 2;
+$spacing-sm: $base-spacing * 3;
+$spacing-md: $base-spacing * 4;
+
+// Animations
+$base-duration: 0.2s;
+$base-timing: ease-in-out;

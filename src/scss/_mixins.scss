@@ -4,3 +4,10 @@
         @content;
     }
 }
+
+@mixin standard-transition($properties, $duration: $base-duration, $easing: $base-timing, $delay: 0s) {
+    transition-property: join($properties, (), comma);
+    transition-duration: $duration;
+    transition-timing-function: $easing;
+    transition-delay: $delay;
+}

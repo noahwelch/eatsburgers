@@ -24,7 +24,12 @@ const standardConfig = {
 }
 
 const standardMix = () => mix
-        .scripts(['node_modules/jquery/dist/jquery.js','src/js/app.js'], './js/app.js')
+        .js('src/js/app.js', './js/app.js')
+        .extract(['jquery'])
+        .autoload({
+            jquery: ['$', 'jQuery', 'window.jQuery'],
+            // 'headroom.js': ['Headroom']
+        })
         .sass('src/scss/style.scss', './')
         .disableNotifications()
         .options({
