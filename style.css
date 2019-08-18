@@ -1267,12 +1267,16 @@ table {
   font-size: 36px;
 }
 
-.general-content p {
+.general-content p, body {
   font-size: 14px;
 }
 
 .page-head__navigation {
   font-size: 18px;
+}
+
+.h1 {
+  line-height: 1.2;
 }
 
 *,
@@ -1303,12 +1307,15 @@ body {
 
 .container, .page-head__navigation .menu-item > a {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
 }
 
+.general-content {
+  margin-top: 15px;
+}
 .general-content h1, .general-content h2, .general-content h3, .general-content h4, .general-content h5, .general-content h6, .general-content p {
   margin-bottom: 15px;
   line-height: 1.4;
@@ -1393,7 +1400,7 @@ body {
     display: flex;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1200px;
+    max-width: 1240px;
   }
 }
 .-nav-open .page-head__navigation {
@@ -1437,19 +1444,55 @@ body {
 .blog-post-preview {
   padding-top: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .blog-post-preview {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .blog-post-preview__image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    margin-right: 20px;
+    width: 740px;
+  }
+}
+.blog-post-preview__image > a {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.blog-post-preview__image > a:hover {
+  opacity: 0.8;
+}
 .blog-post-preview__image > img {
   display: block;
   width: 100%;
   height: auto;
 }
+@media screen and (min-width: 1200px) {
+  .blog-post-preview__content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+}
 .blog-post-preview__meta {
   color: #767676;
   display: block;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 .blog-post-preview__title {
-  padding-bottom: 15px;
+  max-width: 300px;
 }
 .blog-post-preview__title > a {
   color: #CC4B00;

@@ -71,7 +71,7 @@
                     right: auto;
                     left: auto;
                 }
-                max-width: $size-desktop;
+                max-width: $size-desktop + ($spacing-md * 2);
             }
         }
 

@@ -20,7 +20,6 @@ export default class MainNav {
     }
 
     createNavs() {
-        $('body').removeClass(this.bodyOpenClass)
         if (window.matchMedia(`(min-width: 640px)`).matches) {
             this.setDesktopNav()
         } else {
@@ -35,7 +34,11 @@ export default class MainNav {
         }
 
         if (this.mobileNavActive) {
-            this.closeNav()
+            this.$toggle.removeClass(this.mobileToggleActiveClass)
+            this.mobileNavActive = false
+            this.$nav.removeAttr('style')
+            this.$nav.attr('data-property', 'closed')
+            $('body').removeClass(this.bodyOpenClass)
         }
     }
 

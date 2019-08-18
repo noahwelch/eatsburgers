@@ -2,11 +2,35 @@
     padding: {
         top: $spacing-md;
     }
+    @include media($size-desktop) {
+        display: flex;
+    }
+
     &__image {
+        @include media($size-desktop) {
+            flex: 1 0 auto;
+            margin-right: $spacing-md;
+            width: 740px;
+        }
+
+        > a {
+            @include standard-transition(opacity);
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
         > img {
-        display: block;
-        width: 100%;
-        height: auto;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        @include media($size-desktop) {
+            flex: 0 1 auto;
         }
     }
 
@@ -15,21 +39,20 @@
         display: block;
         padding: {
             top: $spacing-sm;
-            bottom: $spacing-sm;
+            bottom: $spacing-xs;
         }
     }
 
     &__title {
+        max-width: 300px;
+
         > a {
             color: $col-orange;
             @include standard-transition(color);
 
-        &:hover {
+            &:hover {
                 color: $col-blue;
             }
-        }
-        padding: {
-            bottom: $spacing-sm;
         }
     }
 

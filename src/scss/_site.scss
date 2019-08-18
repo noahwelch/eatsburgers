@@ -11,6 +11,7 @@ html {
 
 
 body {
+    @extend %base-content;
     display: flex;
     color: $col-gray-dark;
     font-family: "Raleway", Arial, Helvetica, sans-serif;
@@ -20,7 +21,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: $size-desktop;
+    max-width: $size-desktop + ($spacing-md * 2);
     margin: 0 auto;
     padding: {
         right: $spacing-md;
@@ -29,6 +30,8 @@ body {
 }
 
 .general-content {
+    margin-top: $spacing-sm;
+
     h1, h2, h3, h4, h5, h6, p {
         margin-bottom: $spacing-sm;
         line-height: 1.4;
