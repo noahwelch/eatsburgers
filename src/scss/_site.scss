@@ -32,6 +32,18 @@ body {
 .general-content {
     margin-top: $spacing-sm;
 
+    &--full-page {
+        opacity: 0;
+        transform: translateY(5px);
+        @include standard-transition((opacity, transform), $duration: 0.3s, $delay: 0.1s);
+
+
+        &.-inview {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
     h1, h2, h3, h4, h5, h6, p {
         margin-bottom: $spacing-sm;
         line-height: 1.4;
@@ -39,5 +51,6 @@ body {
 
     p {
         @extend %base-content;
+        max-width: 700px;
     }
 }

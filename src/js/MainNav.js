@@ -29,7 +29,6 @@ export default class MainNav {
 
     setDesktopNav() {
         if (this.$toggle) {
-            console.log('not mobile')
             this.$toggle.off()
         }
 

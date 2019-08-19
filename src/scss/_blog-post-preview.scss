@@ -1,9 +1,17 @@
 .blog-post-preview {
+    opacity: 0;
     padding: {
         top: $spacing-md;
     }
+    transform: translateY(5px);
+    @include standard-transition((opacity, transform), $duration: 0.3s, $delay: 0.1s);
     @include media($size-desktop) {
         display: flex;
+    }
+
+    &.-inview {
+        opacity: 1;
+        transform: translateY(0px);
     }
 
     &__image {
@@ -11,6 +19,12 @@
             flex: 1 0 auto;
             margin-right: $spacing-md;
             width: 740px;
+            transform: translateX(-10px);
+            @include standard-transition(transform, $duration: 0.3s, $delay: 0.1s);
+
+            .-inview & {
+                transform: translateX(0px);
+            }
         }
 
         > a {
@@ -31,6 +45,16 @@
     &__content {
         @include media($size-desktop) {
             flex: 0 1 auto;
+
+            .-has-image & {
+                transform: translateX(10px);
+                @include standard-transition(transform, $duration: 0.3s, $delay: 0.1s);
+            }
+
+
+            .-inview & {
+                transform: translateX(0px);
+            }
         }
     }
 

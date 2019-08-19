@@ -1,0 +1,17 @@
+form, input, label, textarea {
+    @extend %base-form;
+}
+
+input, textarea {
+    border: 1px solid $col-gray;
+    box-shadow: none;
+    outline: none;
+    padding: $base-spacing;
+    @include standard-transition((background-color, border, box-shadow));
+
+    &:focus {
+        background-color: $col-gray-light;
+        border: 1px solid $col-blue;
+        box-shadow: 0 0 4px $col-blue-light;
+    }
+}
