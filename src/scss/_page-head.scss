@@ -5,6 +5,13 @@
     left: 0;
     z-index: 1;
 
+    .admin-bar & {
+        top: 46px;
+        @include media($size-full-menu) {
+            top: 32px;
+        }
+    }
+
     &__logo-container {
         background-color: $col-blue-light;
 
