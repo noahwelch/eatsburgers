@@ -27,6 +27,7 @@
             }
         }
         @include media($size-desktop) {
+            flex: 0 0 740px;
             width: 740px;
         }
 
