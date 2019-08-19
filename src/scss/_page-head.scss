@@ -17,6 +17,15 @@
 
         > .container {
             display: flex;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 60px;
+                @include media($size-full-menu) {
+                    display: none;
+                }
+            }
         }
     }
 
