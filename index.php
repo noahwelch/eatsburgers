@@ -1,11 +1,13 @@
 <?php get_header(); ?>
 
-<div class="container" data-component="inview">
-    <?php while( have_posts() ): the_post(); ?>
+<main class="page-main">
+    <div class="container" data-component="inview">
+        <?php while( have_posts() ): the_post(); ?>
 
-        <?php include(locate_template('components/blog-post-preview.php')); ?>
+            <?php include(locate_template('components/blog-post-preview.php')); ?>
 
-    <?php endwhile; ?>
-</div>
+        <?php endwhile; ?>
+    </div>
+</main>
 
 <?php get_footer(); ?>

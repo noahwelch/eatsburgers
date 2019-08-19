@@ -13,13 +13,15 @@ $col-yellow: #FFC700;
 $breakpoint-direction: 'min-width';
 
 // Breakpoints
+$size-full-menu: 640px;
+$size-tablet: 800px;
 $size-desktop: 1200px;
-$size-desktop-menu: 640px;
 
 $base-spacing: 5px;
 $spacing-xs: $base-spacing * 2;
 $spacing-sm: $base-spacing * 3;
 $spacing-md: $base-spacing * 4;
+$spacing-lg: $base-spacing * 8;
 
 // Animations
 $base-duration: 0.2s;

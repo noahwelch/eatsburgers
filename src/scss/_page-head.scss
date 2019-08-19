@@ -1,4 +1,10 @@
 .page-head {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+
     &__logo-container {
         background-color: $col-blue-light;
 
@@ -18,7 +24,7 @@
             left: auto;
         }
         text-decoration: none;
-        @include media($size-desktop-menu) {
+        @include media($size-full-menu) {
             margin-left: 0;
         }
 
@@ -36,7 +42,7 @@
             top: $base-spacing;
             left: $spacing-sm;
         }
-        @include media($size-desktop-menu) {
+        @include media($size-full-menu) {
             display: block;
         }
     }
@@ -46,7 +52,7 @@
         cursor: pointer;
         width: 60px;
         @include standard-transition(background-color);
-        @include media($size-desktop-menu) {
+        @include media($size-full-menu) {
             display: none;
         }
 
@@ -60,12 +66,16 @@
         @extend %base-nav;
         background-color: $col-blue;
         display: none;
-        @include media($size-desktop-menu) {
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+        @include media($size-full-menu) {
             display: block;
+            max-height: inherit;
+            overflow: inherit;
         }
 
         .menu {
-            @include media($size-desktop-menu) {
+            @include media($size-full-menu) {
                 display: flex;
                 margin: {
                     right: auto;
@@ -81,7 +91,7 @@
 
         .menu-item {
             border-bottom: 1px solid $col-blue-off-white;
-            @include media($size-desktop-menu) {
+            @include media($size-full-menu) {
                 border-bottom: none;
             }
 

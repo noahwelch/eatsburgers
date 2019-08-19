@@ -5,7 +5,7 @@
     }
     transform: translateY(5px);
     @include standard-transition((opacity, transform), $duration: 0.3s, $delay: 0.1s);
-    @include media($size-desktop) {
+    @include media($size-tablet) {
         display: flex;
     }
 
@@ -15,16 +15,19 @@
     }
 
     &__image {
-        @include media($size-desktop) {
+        @include media($size-tablet) {
             flex: 1 0 auto;
             margin-right: $spacing-md;
-            width: 740px;
+            width: 50%;
             transform: translateX(-10px);
             @include standard-transition(transform, $duration: 0.3s, $delay: 0.1s);
 
             .-inview & {
                 transform: translateX(0px);
             }
+        }
+        @include media($size-desktop) {
+            width: 740px;
         }
 
         > a {
@@ -35,7 +38,7 @@
             }
         }
 
-        > img {
+        img {
             display: block;
             width: 100%;
             height: auto;
@@ -43,7 +46,7 @@
     }
 
     &__content {
-        @include media($size-desktop) {
+        @include media($size-tablet) {
             flex: 0 1 auto;
 
             .-has-image & {

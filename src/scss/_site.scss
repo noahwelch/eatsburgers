@@ -17,6 +17,23 @@ body {
     font-family: "Raleway", Arial, Helvetica, sans-serif;
     flex-direction: column;
     height: 100vh;
+    padding-top: 60px;
+    @include media($size-full-menu) {
+        padding-top: 110px;
+    }
+
+    &.-nav-open {
+        overflow: hidden;
+
+        @include media($size-full-menu) {
+            overflow: visible;
+        }
+    }
+}
+
+
+.page-main {
+    flex: 1 0 auto;
 }
 
 .container {

@@ -7,11 +7,26 @@ input, textarea {
     box-shadow: none;
     outline: none;
     padding: $base-spacing;
+    width: 100%;
+    max-width: 700px;
     @include standard-transition((background-color, border, box-shadow));
 
     &:focus {
         background-color: $col-gray-light;
         border: 1px solid $col-blue;
         box-shadow: 0 0 4px $col-blue-light;
+    }
+}
+
+button, input[type="button"], input[type="submit"] {
+    background-color: $col-blue;
+    border: none;
+    color: $col-white;
+    cursor: pointer;
+    padding: $spacing-xs $spacing-sm;
+    @include standard-transition(background-color);
+
+    &:hover {
+        background-color: $col-blue-light;
     }
 }
